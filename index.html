@@ -6,16 +6,26 @@
 <style>
   * { font-family: 'Questrial', sans-serif; margin: 0; padding: 0; }
 
+  body
+  {
+    min-height: 100vh;
+    background: 
+        radial-gradient(ellipse at 80% 50%, rgba(180, 180, 220, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 80%, rgba(30, 30, 120, 0.8) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0d0d2b 50%, #1a1a4e 100%);
+  }
+
   header 
   {
     display: flex;
     justify-content: space-between;
     align-items: center;    
     padding: 20px 40px;
-    background-color: #3e57d9;
+    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 2.5px solid white;
   }
 
   header h3 
@@ -44,8 +54,8 @@
 
   .button-1:hover, .button-2:hover 
   {
-    background-color: rgba(255, 255, 255, 0.781);
-    color: #000000;
+    background-color: rgba(255, 255, 255, 0.11);
+    color: #ffffff;
     transform: scale(1.0008);
   }
 
@@ -57,7 +67,7 @@
 </style>
 </HEAD>
 
-<BODY Bgcolor="#3e57d9">
+<BODY>
 
     <header>
       <h3>Printly 3D</h3>
@@ -68,11 +78,11 @@
     
     <div style="padding: 60px 40px;">
 
-      <H1 style="font-size: 80px; color: white; margin-bottom: 10px;">Printly 3D</H1>
+      <H1 style="font-size: 80px; color: white; margin-bottom: 30px;">Printly 3D</H1>
       
-      <H2 style="font-size: 40px; color: white; margin-bottom: 10px;">Transform your virtual designs into <span class="highlight">real life</span> objects</H2>
+      <H2 style="font-size: 40px; color: white; margin-bottom: 30px;">Transform your virtual designs into <span class="highlight">real life</span> objects</H2>
       
-      <H2 style="color: white; line-height: 1.4; margin-bottom: 10px;">Printly3D is a great place to transform your<br>
+      <H2 style="color: white; line-height: 1.4; margin-bottom: 30px;">Printly3D is a great place to transform your<br>
           3D designs into real-life objects.<br> 
           Upload your design, and Printly3D <br>
           will handle the printing and delivery<br>
