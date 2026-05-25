@@ -90,6 +90,37 @@
     color: #006be5;
   }
 
+  .ribbon {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    white-space: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  .ribbon-track {
+    display: inline-block;
+    animation: scroll-left 18s linear infinite;
+  }
+
+  .ribbon-track span {
+    font-size: 22px;
+    color: white;
+    padding: 0 40px;
+  }
+
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
 </style>
 </HEAD>
 
@@ -107,8 +138,8 @@
       </a>
     </header>
     
-  <div style="display: flex; align-items: center; padding: 60px 40px;">
-    <div style="max-width: 50%;">
+  <div style="display: flex; align-items: center; padding: 60px 40px;"> 
+    <div style="max-width: 50%;"> 
 
       <H1 style="font-size: 80px; color: white; margin-bottom: 30px;">Printly 3D</H1>
       
@@ -121,14 +152,31 @@
           process, ensuring a seamless experience.</H2>
 
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfC8OKrFhB0dUc1LJz36oBLQ7U4lhhu6GF_pPek4cf16JtNBQ/viewform">
-          <button class="button-1">Upload your 3d model!</button>
+          <button class="button-1" style="margin-bottom: 30px;">Upload your 3d model!</button>
       </a>
+          <div class="ribbon">
+      <div class="ribbon-track">
+        <span>✦ Print it</span>
+        <span>✦ Order it</span>
+        <span>✦ All in one place</span>
+        <span>✦ Design</span>
+        <span>✦ Discover other designs</span>
+        <span>✦ Upload your model</span>
+        <!--/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\-->
+        <span>✦ Print it</span>
+        <span>✦ Order it</span>
+        <span>✦ All in one place</span>
+        <span>✦ Design</span>
+        <span>✦ Discover other designs</span>
+        <span>✦ Upload your model</span>
+      </div>
+    </div>
     </div>
       <!-- image-->
-    <div style="width: 500px; margin-left: 170px; flex-shrink: 0;">
-      <img src="static/saturn-image-removebg.png" alt="saturn" style="width: 90%; height: auto;">
-    </div>
-  </div>
+    <!-- <div style="width: 500px; margin-left: 170px; flex-shrink: 0;"> -->
+      <!-- <img src="static/saturn-image-removebg.png" alt="saturn" style="width: 90%; height: auto;"> -->
+    <!-- </div> -->
+  <!-- </div> -->
 
 </BODY>
 </HTML>
