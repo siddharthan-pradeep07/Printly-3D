@@ -1,8 +1,8 @@
-<!--Printly 3D code by siddharthan🪐-->
+<!--Printly 3D code by siddharthan 💛-->
 <HTML>
 <HEAD>
-<TITLE> Printly 3D🪐</TITLE>
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<TITLE> Printly 3D</TITLE>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style>
   * { font-family: 'Questrial', sans-serif; margin: 0; padding: 0; }
 
@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;    
     padding: 20px 40px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -116,6 +116,45 @@
     padding: 0 40px;
   }
 
+  .section-second 
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    padding: 80px 40px;
+    text-align: center;
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-second h2 
+  {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 40px;
+  }
+
+  .draggable-image
+  {
+    position: absolute;
+    cursor: grab;
+    width: 150px;
+    height: auto;
+    user-select: none;
+    transition: transform 0.1s ease;    
+  }
+
+  .draggable-image:active 
+  {
+    cursor: grabbing;
+    transform: scale(1.05);
+  }
+
   @keyframes scroll-left {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -148,7 +187,7 @@
           will handle the printing and delivery<br>
           process, ensuring a seamless experience.</H2>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfC8OKrFhB0dUc1LJz36oBLQ7U4lhhu6GF_pPek4cf16JtNBQ/viewform">
-          <button class="button-1">Upload your 3d model!</button>
+          <button class="button-1">Click here to get started</button>
       </a>
     </div>
   </div>
@@ -170,6 +209,62 @@
       <span>✦ Upload your model</span>
     </div>
   </div>
+
+  <div class="section-second">
+    <h2>Search and find 3D models to print</h2>
+    <a href="https://thingiverse.com">
+        <button class="button-1">Discover 3d models</button>
+    </a>
+    <img class="draggable-image" src="static/drag/img1.png" style="top: 20px; left: 5%;">
+    <img class="draggable-image" src="static/drag/img2.png" style="top: 50px; left: 20%;">
+    <img class="draggable-image" src="static/drag/img3.png" style="top: 30px; right: 10%;">
+    <img class="draggable-image" src="static/drag/img4.png" style="top: 150px; right: 20%;">
+    <img class="draggable-image" src="static/drag/img5.png" style="top: 200px; left: 10%;">
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.draggable-image').forEach(img => 
+  {
+    let isDragging = false;
+    let startX, startY, startLeft, startTop;
+    const container = document.querySelector('.section-second');
+
+    img.addEventListener('mousedown', (e) => 
+    {
+      isDragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      startLeft = img.offsetLeft;
+      startTop = img.offsetTop;
+      img.style.transition = 'none';
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => 
+    {
+      if (!isDragging) return;
+
+      const rect = container.getBoundingClientRect();
+
+      let newLeft = startLeft + (e.clientX - startX);
+      let newTop  = startTop  + (e.clientY - startY);
+
+      // confine within section-second
+      newLeft = Math.max(0, Math.min(newLeft, rect.width  - img.offsetWidth));
+      newTop  = Math.max(0, Math.min(newTop,  rect.height - img.offsetHeight));
+
+      img.style.left = newLeft + 'px';
+      img.style.top  = newTop  + 'px';
+    });
+
+    document.addEventListener('mouseup', () => 
+    {
+      isDragging = false;
+      img.style.transition = 'transform 0.1s ease';
+    });
+  });
+</script>
 
 </BODY>
 </HTML>
