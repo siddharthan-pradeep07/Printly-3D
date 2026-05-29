@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE> Printly 3D</TITLE>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<style>
+  * { font-family: 'Questrial', sans-serif; margin: 0; padding: 0; }
+
+  body
+  {
+    min-height: 100vh;
+    background: 
+        radial-gradient(ellipse at 80% 50%, rgba(180, 180, 220, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 80%, rgba(30, 30, 120, 0.8) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0d0d2b 50%, #1a1a4e 100%);
+  }
+  nav 
+  {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  nav a 
+  {
+    color: white;
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  link-a
+  {
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    gap:40px;
+  }
+
+  nav a:hover 
+  {
+    color: #279bd1;
+  }
+
+  nav a.active 
+  {
+    color: #006be5;
+  }
+  header 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px 40px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2.5px solid white;
+  }
+  .center-image 
+  {
+    display: block;
+    margin: 60px auto;
+    width: 400px;       
+    height: 400px;      
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .link 
+  {
+    font-style: italic;
+    color: #ffffff;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .link:hover 
+  {
+    text-decoration: underline;
+  }
+  
+  .highlight 
+  {
+    color: #94bdfa;
+  }
+
+</style>
+</HEAD>
+<BODY>
+    <header>
+      <h3>Printly 3D</h3>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="about.html" >About</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html" class="active">News</a>
+      </nav>
+    </header>
+    <img class="center-image" src="../static/amazer-preview.png" alt="image">
+    <p style="text-align: center; color: white; font-size: 18px; margin-top: 20px;">Try out Amazer, a micro mouse simulator</p>
+    <div style="text-align: center; margin-top: 15px; display: flex; justify-content: center; gap: 40px;">
+       <a href="https://siddharthan-pradeep07.github.io/Amazer/src/pages/home.html" class="link">
+           <span class="highlight">Take a look!</span>
+       </a>
+       <a href="https://github.com/Siddharthan-pradeep07/Amazer" class="link">
+           <span class="highlight">GitHub</span>
+       </a>
+    </div>
+</BODY>
+</HTML>

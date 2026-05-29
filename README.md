@@ -8,7 +8,7 @@ About the program:
    It has a button that links the user to a google form in which the user can submit their 3d model and enter their name with address.
    then the model will be printed using my 3d printers and delivered to their doorstep, payment system is linked to the google form. the user could click the link after submiting the google form.
    
-   [note: this website is under construction. Project started on 2/april/2026]
+   [note: this website is under construction. Project started on 02/april/2026]
    [note: the 3d printing service is only available in india, planning on other coumtries]
 
    Thank you for reading </> happy hacking
